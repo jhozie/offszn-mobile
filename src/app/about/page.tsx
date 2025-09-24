@@ -1,8 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { Home, Target, Star } from "lucide-react";
+import { Home, Target, Star, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export default function About() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-hidden">
       {/* Navigation */}
@@ -10,13 +19,64 @@ export default function About() {
         <div className="text-xl md:text-2xl font-bold text-white tracking-wide">
           OFF-SZN MOBILE
         </div>
+        
+        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           <Link href="/" className="hover:text-purple-400 transition-all duration-300 font-medium text-sm md:text-base">HOME</Link>
           <Link href="/about" className="hover:text-purple-400 transition-all duration-300 font-medium text-sm md:text-base text-purple-400">ABOUT</Link>
           <Link href="/services" className="hover:text-purple-400 transition-all duration-300 font-medium text-sm md:text-base">SERVICES</Link>
           <Link href="/register" className="hover:text-purple-400 transition-all duration-300 font-medium text-sm md:text-base">REGISTER</Link>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMobileMenu}
+          className="md:hidden p-2 rounded-lg bg-black/20 border border-white/10 hover:bg-black/40 transition-colors"
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? (
+            <X className="w-6 h-6 text-white" />
+          ) : (
+            <Menu className="w-6 h-6 text-white" />
+          )}
+        </button>
       </nav>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-sm">
+          <div className="flex flex-col items-center justify-center h-full space-y-8">
+            <Link 
+              href="/" 
+              className="text-2xl font-bold hover:text-purple-400 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              HOME
+            </Link>
+            <Link 
+              href="/about" 
+              className="text-2xl font-bold text-purple-400 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              ABOUT
+            </Link>
+            <Link 
+              href="/services" 
+              className="text-2xl font-bold hover:text-purple-400 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              SERVICES
+            </Link>
+            <Link 
+              href="/register" 
+              className="text-2xl font-bold hover:text-purple-400 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              REGISTER
+            </Link>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="relative py-20 px-6 lg:px-12">
