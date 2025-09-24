@@ -77,7 +77,7 @@ export default function Register() {
             REGISTRATION <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">SUCCESSFUL!</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Thank you for joining Off-Szn Mobile! We'll contact you within 24 hours to complete your membership setup and schedule your first session.
+            Thank you for joining Off-Szn Mobile! We&apos;ll contact you within 24 hours to complete your membership setup and schedule your first session.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -134,7 +134,7 @@ export default function Register() {
             JOIN <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">OFF-SZN MOBILE</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Start your mobile fitness journey today. Fill out the form below and we'll get you started with the perfect mobile training plan.
+            Start your mobile fitness journey today. Fill out the form below and we&apos;ll get you started with the perfect mobile training plan.
           </p>
         </div>
       </section>
@@ -268,7 +268,7 @@ export default function Register() {
                 </div>
                 <div>
                   <label htmlFor="experienceLevel" className="block text-sm font-semibold mb-2">
-                    What's your fitness experience level? *
+                    What&apos;s your fitness experience level? *
                   </label>
                   <select
                     id="experienceLevel"

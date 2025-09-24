@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Home, Target, Star, Dumbbell, Users, Heart } from "lucide-react";
+import { Home, Target, Star } from "lucide-react";
 
 export default function About() {
   return (
@@ -38,7 +38,7 @@ export default function About() {
             ABOUT <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">OFF-SZN MOBILE</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-12">
-            We're revolutionizing fitness by bringing professional training directly to your doorstep. 
+                 We&apos;re revolutionizing fitness by bringing professional training directly to your doorstep.
             Experience the convenience of personalized fitness without leaving your comfort zone.
           </p>
         </div>
@@ -78,8 +78,8 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">OUR MISSION</h3>
                 <p className="text-gray-300 text-lg">
-                  "To revolutionize fitness by bringing professional training directly to our clients, 
-                  making health and wellness accessible, convenient, and enjoyable for everyone, everywhere."
+                       &quot;To revolutionize fitness by bringing professional training directly to our clients,
+                  making health and wellness accessible, convenient, and enjoyable for everyone, everywhere.&quot;
                 </p>
               </div>
             </div>

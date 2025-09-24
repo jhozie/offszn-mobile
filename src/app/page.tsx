@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Dumbbell, Building2, Heart, Check } from "lucide-react";
+import { Dumbbell, Building2, Heart } from "lucide-react";
 
 export default function Home() {
   return (
